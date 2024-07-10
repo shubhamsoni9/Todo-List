@@ -16,9 +16,9 @@ const handleSubmit=(e)=>{
 
     e.preventDefault();
 
-    if(task.name.length < 3) return toast.error("Task must have more than 3 character");
+    if(task.name.length < 2) return toast.error("Task must have more than 1 character");
 
-    if(task.name.length > 100) return toast.error("Task must not be more than 100 character");
+    if(task.name.length > 15) return toast.error("Task must not be more than 15 character");
 
     setTasks((prev)=>{
         const list=[...prev,task];
